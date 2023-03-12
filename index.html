@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>dBalloon </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h3 id="heading">🎈音量氣球 dBalloon🎈</h3>
+	
+		
+	<form id="passwordform"onsubmit ="return verifyPass()">
+        <!-- Password input -->
+        <input type = "password" id = "password1" value = ""  placeholder="輸入密碼" >
+        <input type = "submit" value = "確認密碼">
+    </form>
+
+	<div class="outer">
+    <button id="start" onclick="startr();" style="display:none;" title="click start needed as security in browser increased and voice mic can only be started from a gesture on page">開始充氣！</button>
+	<p id="result" style="font-size:8px"></p>
+	</div>
+	
+	<div class="outer">
+	<img id="pin" src="img/pin.png" alt="pin">
+	<img id="dBalloon" src="img/balloon.png" alt="dBalloon">
+	</div>
+	
+	<div style="visibility:hidden"><canvas id="canvas" width="150" height="300" style='background:blue'></canvas></div>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+    
+
+	<footer>
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="img1" alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">dBalloon</span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/qiu-xuesheng/dBalloon" property="cc:attributionName" rel="cc:attributionURL">qiuxuesheng</a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">創用CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a>釋出。</p>
+	</footer>
+
+</body>
+</html>
