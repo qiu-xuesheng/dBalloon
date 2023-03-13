@@ -1,4 +1,5 @@
 // Courtesy www.0AV.com, LGPL license or as set by forked host, Travis Holliday, https://codepen.io/travisholliday/pen/gyaJk (modified by fixing for browser security change)
+	var maxdb;	
 	
 	function verifyPass()
     {   
@@ -10,7 +11,7 @@
         }
 		if(password == "stfu")
         {
-			document.getElementById("start").style.display = "block";
+			document.getElementById("ok").style.display = "block";
 			document.getElementById("passwordform").style.display = "none";
 			return false;
 		}
@@ -18,6 +19,14 @@
             alert('密碼錯誤');
 			return false;		
 		}	
+	}
+	
+	function setdb()
+	{
+		maxdb =  document.getElementById("text1").value;
+		document.getElementById("ok").style.display = "none";
+		document.getElementById("start").style.display = "block";
+		return false;
 	}
 	
 	function startr(){	
@@ -62,7 +71,7 @@
 							  
 				  document.getElementById("result").innerHTML = Math.round(average)+"dB";//+size;
 				  
-				  if (average > 100){
+				  if (average > maxdb){
 					if (size < 570){
 						size += 10;  
 						document.getElementById("dBalloon").style.height = size+"px";
