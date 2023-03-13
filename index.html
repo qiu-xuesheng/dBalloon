@@ -11,16 +11,25 @@
 <h3 id="heading">🎈音量氣球 dBalloon🎈</h3>
 	
 		
-	<form id="passwordform"onsubmit ="return verifyPass()">
+	<form id="passwordform" onsubmit ="return verifyPass()">
         <!-- Password input -->
         <input type = "password" id = "password1" value = ""  placeholder="輸入密碼" >
         <input type = "submit" value = "確認密碼">
     </form>
 
-	<div class="outer">
-    <button id="start" onclick="startr();" style="display:none;" title="click start needed as security in browser increased and voice mic can only be started from a gesture on page">開始充氣！</button>
-	<p id="result" style="font-size:8px"></p>
+	<div id="ok" class="outer" style="display:none;">	
+	<form id="dbset"onsubmit ="return setdb()">
+        設定最高能容忍的分貝量：<input type = "text" id = "text1" value = "100"  placeholder="" >
+		<input type = "submit" value = "設定">
+    </form>
 	</div>
+	
+	<div class="outer">	
+    <button id="start" style="display:none;" onclick="startr();" title="click start needed as security in browser increased and voice mic can only be started from a gesture on page">開始充氣！</button>
+	</div>	
+
+	<p id="result" style="font-size:8px"></p>
+
 	
 	<div class="outer">
 	<img id="pin" src="img/pin.png" alt="pin">
